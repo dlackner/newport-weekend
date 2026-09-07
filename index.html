@@ -1,0 +1,289 @@
+<title>Newport CA Weekend</title>
+<style>
+  :root {
+    --ground: #FFFFFF;
+    --ink: #1A1A1A;
+    --ink-soft: #757575;
+    --accent: #2A6475;
+    --rule: #E8E8E8;
+    --bubble: #F0F6F8;
+    --bubble-edge: #D8E6EA;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: inherit; text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+  a:hover, a:focus-visible { text-decoration-color: var(--accent); color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+  .page {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 3rem;
+  }
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(0, 40rem) 15rem;
+    gap: 3.5rem;
+    justify-content: center;
+  }
+
+  header { margin-bottom: 3rem; }
+  .anchor-mark { color: var(--accent); margin-bottom: 1rem; }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    margin: 0 0 0.8rem;
+  }
+  h1 {
+    font-size: clamp(1.9rem, 5vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0 0 0.6rem;
+    text-wrap: balance;
+  }
+  .sub { margin: 0; color: var(--ink-soft); }
+
+  .day { padding-bottom: 1.5rem; }
+  .day h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 1.1rem;
+  }
+  .day h2 span { font-weight: 400; color: var(--ink-soft); }
+
+  .stops { display: grid; gap: 0.85rem; margin: 0; }
+  .stop {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: 1rem;
+  }
+  .time {
+    font-variant-numeric: tabular-nums;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    padding-top: 0.1rem;
+    white-space: nowrap;
+  }
+  .what { margin: 0; }
+  .where {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-top: 0.1rem;
+  }
+  .note { font-size: 0.85rem; color: var(--ink-soft); }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin: 0.4rem 0 2rem;
+    color: var(--accent);
+    opacity: 0.65;
+  }
+  .divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    border-top: 1px solid var(--rule);
+  }
+  .divider svg { flex: none; }
+
+  aside.bring {
+    align-self: start;
+    position: sticky;
+    top: 2rem;
+    background: var(--bubble);
+    border: 1px solid var(--bubble-edge);
+    border-radius: 18px;
+    padding: 1.3rem 1.4rem;
+  }
+  aside.bring h3 {
+    margin: 0 0 0.6rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent);
+  }
+  aside.bring ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 0.9rem;
+  }
+  aside.bring li { margin-bottom: 0.35rem; }
+  aside.bring li:last-child { margin-bottom: 0; }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  footer svg { color: var(--accent); flex: none; }
+
+  @media (max-width: 760px) {
+    .layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    aside.bring { position: static; order: -1; }
+  }
+  @media (max-width: 440px) {
+    .stop { grid-template-columns: 1fr; gap: 0.1rem; }
+  }
+</style>
+
+<div class="page">
+  <div class="layout">
+    <main>
+
+      <header>
+        <div class="anchor-mark">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="4.5" r="2.2"></circle>
+            <line x1="12" y1="6.7" x2="12" y2="19.5"></line>
+            <line x1="8.5" y1="10" x2="15.5" y2="10"></line>
+            <path d="M4.5 13.5 C4.5 17.8 8 20.3 12 20.3 C16 20.3 19.5 17.8 19.5 13.5"></path>
+            <path d="M4.5 13.5 L7 15.2"></path>
+            <path d="M19.5 13.5 L17 15.2"></path>
+          </svg>
+        </div>
+        <p class="eyebrow">Kathi &amp; Eric · Newport Beach</p>
+        <h1>Newport CA Weekend</h1>
+        <p class="sub">Saturday through Tuesday</p>
+      </header>
+
+      <section class="day">
+        <h2>Saturday <span>· Arrival</span></h2>
+        <div class="stops">
+          <div class="stop"><span class="time">12:00 PM</span><p class="what">Pick up Kathi &amp; Eric at LAX</p></div>
+          <div class="stop"><span class="time">1:30 PM</span><p class="what">Lunch and a walk around Newport</p></div>
+          <div class="stop"><span class="time">5:00 PM</span><p class="what">Relax and dinner at home</p></div>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden="true">
+        <svg width="42" height="14" viewBox="0 0 46 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M1,12 C7,4 13,4 19,12 C25,4 31,4 37,12 C40,8 43,8 45,10"></path>
+        </svg>
+      </div>
+
+      <section class="day">
+        <h2>Sunday <span>· Harbor day</span></h2>
+        <div class="stops">
+          <div class="stop">
+            <span class="time">9:00 AM</span>
+            <p class="what">Breakfast at <a href="https://www.dorydeli.com/">Dory's Deli</a>
+              <a class="where" href="https://maps.google.com/?q=Dory's+Deli,+2108+W+Oceanfront,+Newport+Beach,+CA+92663">2108 W Oceanfront, Newport Beach</a>
+            </p>
+          </div>
+          <div class="stop">
+            <span class="time">11:00 AM</span>
+            <p class="what">Duffy boat rental with <a href="https://newportharborboatrentals.net/">Newport Harbor Boat Rentals</a>, until 1:00 PM
+              <a class="where" href="https://maps.google.com/?q=Newport+Harbor+Boat+Rentals,+400+Main+St,+Newport+Beach,+CA+92661">400 Main St, Newport Beach</a>
+            </p>
+          </div>
+          <div class="stop"><span class="time">Afternoon</span><p class="what">Home to shower and relax</p></div>
+          <div class="stop">
+            <span class="time">5:00 PM</span>
+            <p class="what">Wine at <a href="https://www.bravantevineyards.com/lido/">Lido Tasting Room</a>
+              <a class="where" href="https://maps.google.com/?q=201+Shipyard+Way+Ste+3,+Newport+Beach,+CA+92663">201 Shipyard Way, Ste 3, Newport Beach</a>
+            </p>
+          </div>
+          <div class="stop">
+            <span class="time">6:15 PM</span>
+            <p class="what">Dinner at <a href="https://www.osteriamolo.com/">Molo</a>
+              <a class="where" href="https://maps.google.com/?q=Molo,+251+Shipyard+Way,+Newport+Beach,+CA+92663">251 Shipyard Way, Newport Beach</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden="true">
+        <svg width="42" height="14" viewBox="0 0 46 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M1,12 C7,4 13,4 19,12 C25,4 31,4 37,12 C40,8 43,8 45,10"></path>
+        </svg>
+      </div>
+
+      <section class="day">
+        <h2>Monday <span>· San Diego Zoo</span></h2>
+        <div class="stops">
+          <div class="stop">
+            <span class="time">8:00 AM</span>
+            <p class="what">Depart for the San Diego Zoo <span class="note">— about 1 hr 20 min drive</span></p>
+          </div>
+          <div class="stop">
+            <span class="time">2:00 PM</span>
+            <p class="what">Leave the zoo <span class="note">— no later than 2:00</span></p>
+          </div>
+          <div class="stop"><span class="time">3:30 PM</span><p class="what">Relax before dinner</p></div>
+          <div class="stop">
+            <span class="time">7:00 PM</span>
+            <p class="what">Dinner at <a href="https://www.restauranthabana.com/">Habana</a>
+              <a class="where" href="https://maps.google.com/?q=Habana,+2930+Bristol+St,+Costa+Mesa,+CA+92626">2930 Bristol St, Costa Mesa</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden="true">
+        <svg width="42" height="14" viewBox="0 0 46 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M1,12 C7,4 13,4 19,12 C25,4 31,4 37,12 C40,8 43,8 45,10"></path>
+        </svg>
+      </div>
+
+      <section class="day">
+        <h2>Tuesday <span>· Dana Point &amp; Laguna</span></h2>
+        <div class="stops">
+          <div class="stop">
+            <span class="time">10:00 AM</span>
+            <p class="what">Brunch at <a href="https://www.youngsbeachshack.com/">Young's Beach Shack</a>
+              <a class="where" href="https://maps.google.com/?q=Young's+Beach+Shack,+33521+Ritz+Carlton+Dr,+Dana+Point,+CA+92629">33521 Ritz-Carlton Dr, Dana Point</a>
+            </p>
+          </div>
+          <div class="stop"><span class="time">Afternoon</span><p class="what">Walk around Laguna Beach</p></div>
+          <div class="stop">
+            <span class="time">Evening</span>
+            <p class="what">Dinner in Newport <span class="note">— location TBD</span></p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="4.5" r="2.2"></circle>
+          <line x1="12" y1="6.7" x2="12" y2="19.5"></line>
+          <line x1="8.5" y1="10" x2="15.5" y2="10"></line>
+          <path d="M4.5 13.5 C4.5 17.8 8 20.3 12 20.3 C16 20.3 19.5 17.8 19.5 13.5"></path>
+        </svg>
+        <span>Home base: <a href="https://maps.google.com/?q=550+Paularino+Ave+F206,+Costa+Mesa,+CA+92626">550 Paularino Ave, Unit F206, Costa Mesa, CA 92626</a></span>
+      </footer>
+
+    </main>
+
+    <aside class="bring">
+      <h3>What to bring</h3>
+      <ul>
+        <li>Sunscreen</li>
+        <li>Sunglasses &amp; hat</li>
+        <li>Light jacket for harbor evenings</li>
+        <li>Comfortable walking shoes</li>
+        <li>Swimsuit</li>
+        <li>2× Connecticut casual outfits for dinner</li>
+      </ul>
+    </aside>
+  </div>
+</div>
