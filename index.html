@@ -89,6 +89,14 @@
     margin-top: 0.1rem;
   }
   .note { font-size: 0.85rem; color: var(--ink-soft); }
+  .sublist {
+    margin: 0.45rem 0 0;
+    padding-left: 1.2rem;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+  .sublist li { margin-bottom: 0.2rem; }
+  .sublist li:last-child { margin-bottom: 0; }
 
   .divider {
     display: flex;
@@ -104,7 +112,6 @@
     border-top: 1px solid var(--rule);
   }
   .divider svg { flex: none; }
-
 
   footer {
     border-top: 1px solid var(--rule);
@@ -204,7 +211,15 @@
         <div class="stops">
           <div class="stop">
             <span class="time">8:00 AM</span>
-            <p class="what">Depart for the San Diego Zoo <span class="note">— about 1 hr 20 min drive</span></p>
+            <div>
+              <p class="what">Depart for the San Diego Zoo <span class="note">— about 1 hr 20 min drive</span></p>
+              <ol class="sublist">
+                <li>Double-decker bus tour</li>
+                <li><a href="https://zoo.sandiegozoo.org/animals/elephant">Elephant Odyssey exhibit</a></li>
+                <li>Lunch</li>
+                <li>Explore &amp; Skyfari Aerial Tram</li>
+              </ol>
+            </div>
           </div>
           <div class="stop">
             <span class="time">2:00 PM</span>
@@ -254,7 +269,6 @@
       </footer>
 
     </main>
-
   </div>
 </div>
 </body>
