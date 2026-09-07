@@ -34,7 +34,7 @@
   }
   .layout {
     display: grid;
-    grid-template-columns: minmax(0, 40rem) 15rem;
+    grid-template-columns: minmax(0, 40rem);
     gap: 3.5rem;
     justify-content: center;
   }
@@ -105,30 +105,6 @@
   }
   .divider svg { flex: none; }
 
-  aside.bring {
-    align-self: start;
-    position: sticky;
-    top: 2rem;
-    background: var(--bubble);
-    border: 1px solid var(--bubble-edge);
-    border-radius: 18px;
-    padding: 1.3rem 1.4rem;
-  }
-  aside.bring h3 {
-    margin: 0 0 0.6rem;
-    font-size: 0.78rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    color: var(--accent);
-  }
-  aside.bring ul {
-    margin: 0;
-    padding-left: 1.1rem;
-    font-size: 0.9rem;
-  }
-  aside.bring li { margin-bottom: 0.35rem; }
-  aside.bring li:last-child { margin-bottom: 0; }
 
   footer {
     border-top: 1px solid var(--rule);
@@ -144,7 +120,6 @@
 
   @media (max-width: 760px) {
     .layout { grid-template-columns: 1fr; gap: 2.5rem; }
-    aside.bring { position: static; order: -1; }
   }
   @media (max-width: 440px) {
     .stop { grid-template-columns: 1fr; gap: 0.1rem; }
@@ -280,16 +255,6 @@
 
     </main>
 
-    <aside class="bring">
-      <h3>What to bring</h3>
-      <ul>
-        <li>Sunscreen</li>
-        <li>Sunglasses &amp; hat</li>
-        <li>Light jacket for harbor evenings</li>
-        <li>Comfortable walking shoes</li>
-        <li>2× nice outfits for dinner</li>
-      </ul>
-    </aside>
   </div>
 </div>
 </body>
